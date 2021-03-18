@@ -7,6 +7,8 @@ Get bandwidth usage data for a server
 /bandwidth/{serverTag}
 
 Parameters
+
+
 | Name        | Description           
 | ------------- |:-------------:|
 | period     | Number of days to fetch data for, defaults to 35 | 
