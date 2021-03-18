@@ -1,3 +1,14 @@
+Getting an api key
+=======
+Visit novoserve.com/api. 
+enter the IP-address where you want to access the api from and click generate. 
+
+
+![image info](https://i.imgur.com/oq9tVrg.png)
+
+
+
+
 Bandwidth
 =======
 
