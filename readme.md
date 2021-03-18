@@ -1,7 +1,7 @@
 Bandwidth
 =======
 
-# get bandwidth
+## get bandwidth
 Get bandwidth usage data for a server
 
 /bandwidth/{serverTag}
@@ -44,8 +44,9 @@ Parameters
  ```
 
 Servers
----------------
-get server information 
+=======
+## get server information by tag
+
 /servers/{serverTag}
 
 **succesful operation**
