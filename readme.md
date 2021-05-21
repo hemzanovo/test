@@ -6,7 +6,10 @@ enter the IP-address where you want to access the api from and click generate.
 
 ![image info](https://i.imgur.com/oq9tVrg.png)
 
+## request structure
 
+A request should have the following header:
+Accept application/json
 
 
 Bandwidth
