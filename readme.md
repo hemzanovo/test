@@ -80,6 +80,7 @@ Servers
 
 OS installs
 =======
+## get OS
 Get available operating systems for given server. Send a GET request to the following endpoint:
 /os-install/{serverTag}
 
@@ -128,6 +129,7 @@ Get available operating systems for given server. Send a GET request to the foll
       }
 }
 ```
+## Install new OS
 to install a OS on the server use the name of one of the images listed in the return from the GET request. Make a new POST request to the server and use the image name. 
 Body for post:
 ```
@@ -137,6 +139,7 @@ Body for post:
 ```
 Reverse DNS 
 =======
+## get RDNS
 To get the current reverse DNS information. Perform a get request to the following endpoint
 /rdns/{servertag} 
 **succesful operation**
@@ -152,7 +155,7 @@ To get the current reverse DNS information. Perform a get request to the followi
 	    } 
     ]
 ```
-
+## New RDNS entry
 This is a example of new reverse dns submission body using the post method:
 
 ```
