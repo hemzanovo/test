@@ -137,6 +137,25 @@ Body for post:
 	"os":  "os-install-Ubuntu1804"  
 }
 ```
+web-iso installs
+=======
+## get web-iso
+Get available web-iso for given server. Send a GET request to the following endpoint:
+/webiso-installs_/{serverTag}
+
+**succesful operation**
+```json
+[  
+	{  
+	  "url":  "http://webiso.novoserve.com/.installs/CR-CentOS-6.iso", 
+	  "name":  "CR-CentOS-6.iso"  }, 
+	  {  
+	   "url":  "http://webiso.novoserve.com/.installs/CR-CentOS-7.iso", 
+	   "name":  "CR-CentOS-7.iso"  
+	 }  
+]
+```
+
 Reverse DNS 
 =======
 ## get RDNS
@@ -164,3 +183,53 @@ This is a example of new reverse dns submission body using the post method:
 	"rdns":  "reverse-dns.novoserve.com"  
 }
 ```
+
+
+Client state
+=======
+## get client state information by tag
+
+/client-state/{servertag}
+
+**succesful operation**
+``` json
+[  
+	{  
+	"attention_hardware":  "[JSON data with more informatino about the attention state]",  
+	"id":  "999-999",  
+	"ctime":  "1589982114", 
+	 "ctime-human":  "Wed May 20 15:41:54 2020", 
+	 "state":  "attention_hardware"  
+	 }  
+]
+```
+
+
+ILO controlls
+=======
+## get ilo-uid by tag
+
+/ilo-uid/{servertag}
+succesful operation response: 
+```
+on  |  off  |  blink
+```
+## ILO controlls for different resources 
+Get information about ILO on the following endpoints:
+
+/ilo-controls/{rescource}/{servertag}
+possible resource options: 
+ - firmware-version
+ - global-settings
+ - hardware-profile
+ - network-settings
+ - pending-boot-mode
+ - power-profile
+ - powerstate
+ - pxe-once
+ - snmp-settings
+ - tpm-status
+ - powerstate
+
+
+
