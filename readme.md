@@ -1,7 +1,7 @@
 Getting an api key
 =======
-Visit novoserve.com/api. 
-enter the IP-address where you want to access the api from and click generate. 
+Visit WHMCS customer portal and go to the api managemer page. 
+enter the IP-address where you want to access the api from and click generate. Its also possible to restrict by servertag
 
 
 ![image info](https://i.imgur.com/ob2XrBV.png)
@@ -232,3 +232,58 @@ possible resource options:
  - snmp-settings
  - tpm-status
  - powerstate
+
+## ilo health check 
+
+
+/health-check/ilo/{server-tag}
+
+Network info 
+=======
+## get ilo-uid by tag
+/network-info​/{serverTag}
+
+succesful response 
+```
+{  
+  "ip":  "10.3.1.4",  
+  "subnet":  "255.255.255.0", 
+  "gateway":  "10.3.1.1"  
+ }
+```
+
+Health check 
+=======
+## Get health of hardware
+/health-check/hardware/{server-tag}
+
+succesful response 
+```
+{
+   "issues":[
+      {
+         "eventid":"2521234",
+         "clock":0,
+         "name":"Fan 0.3: Fan is in warning state",
+         "severity":"2"
+      }
+   ],
+   "description":"[2] Fan 0.3: Fan is in warning state\n"
+}
+```
+# Get health of ILO 
+/health-check/ilo/{server-tag}
+succesful response 
+```
+{
+   "FANS":{
+      "FAN":[
+         {
+            "ZONE":{
+               "VALUE":"System"
+            },
+            "LABEL":{
+               "VALUE":"Fan Block 1"
+            },
+            ..... response too long for documentation
+        ```    
