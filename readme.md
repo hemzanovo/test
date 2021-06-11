@@ -218,7 +218,9 @@ on  |  off  |  blink
 Get information about ILO on the following endpoints:
 
 /ilo-controls/{rescource}/{servertag}
+
 possible resource options: 
+
  - firmware-version
  - global-settings
  - hardware-profile
@@ -230,6 +232,3 @@ possible resource options:
  - snmp-settings
  - tpm-status
  - powerstate
-
-
-
